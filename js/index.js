@@ -24,7 +24,7 @@ window.addEventListener('scroll', () => {
     shadow.style.height = `${scroll * 0.5 + 300}px`;
 
     // 標題分隔線
-    border.style.width = `${scroll / (sectionY.top + section_height) * 60}%`;
+    border.style.width = `${scroll / (sectionY.top + section_height) * 100}%`;
 
     // 標題文字淡出效果
     // big_title.style.opacity = - scroll / (header_height / 2) + 1;
@@ -53,7 +53,7 @@ for (let i = 0; i < element.length; i++) {
 }
 
 // 頁面滾動效果(指定頁面)
-const links = document.querySelectorAll("a");
+const links = document.querySelectorAll(".smooth a");
 
 for (const link of links) {
     link.addEventListener("click", clickHandler);
@@ -63,7 +63,6 @@ function clickHandler(e) {
     e.preventDefault();
     const href = this.getAttribute("href");
     const offsetTop = document.querySelector(href).offsetTop;
-
     scroll({
         top: offsetTop,
         behavior: "smooth"
@@ -73,11 +72,11 @@ function clickHandler(e) {
 // modal
 var Modal = (function() {
 
-    var trigger = $qsa('.modal__trigger'); // what you click to activate the modal
+    var trigger = $qsa('.modal-trigger'); // what you click to activate the modal
     var modals = $qsa('.modal'); // the entire modal (takes up entire window)
-    var modalsbg = $qsa('.modal__bg'); // the entire modal (takes up entire window)
-    var content = $qsa('.modal__content'); // the inner content of the modal
-    var closers = $qsa('.modal__close'); // an element used to close the modal
+    var modalsbg = $qsa('.modal-bg'); // the entire modal (takes up entire window)
+    var content = $qsa('.modal-content'); // the inner content of the modal
+    var closers = $qsa('.modal-close'); // an element used to close the modal
     var w = window;
     var isOpen = false;
     var contentDelay = 400; // duration after you click the button and wait for the content to show
@@ -105,7 +104,7 @@ var Modal = (function() {
 
     var makeDiv = function(self, modal) {
 
-        var fakediv = document.getElementById('modal__temp');
+        var fakediv = document.getElementById('modal_temp');
 
         /**
          * if there isn't a 'fakediv', create one and append it to the button that was
@@ -114,7 +113,7 @@ var Modal = (function() {
 
         if (fakediv === null) {
             var div = document.createElement('div');
-            div.id = 'modal__temp';
+            div.id = 'modal_temp';
             self.appendChild(div);
             moveTrig(self, modal, div);
         }
@@ -123,13 +122,13 @@ var Modal = (function() {
     var moveTrig = function(trig, modal, div) {
         var trigProps = trig.getBoundingClientRect();
         var m = modal;
-        var mProps = m.querySelector('.modal__content').getBoundingClientRect();
+        var mProps = m.querySelector('.modal-content').getBoundingClientRect();
         var transX, transY, scaleX, scaleY;
         var xc = w.innerWidth / 2;
         var yc = w.innerHeight / 2;
 
         // this class increases z-index value so the button goes overtop the other buttons
-        trig.classList.add('modal__trigger--active');
+        trig.classList.add('modal-trigger--active');
 
         // these values are used for scale the temporary div to the same size as the modal
         scaleX = mProps.width / trigProps.width;
@@ -144,7 +143,7 @@ var Modal = (function() {
         transY = Math.round(yc - trigProps.top - trigProps.height / 2);
 
         // if the modal is aligned to the top then move the button to the center-y of the modal instead of the window
-        if (m.classList.contains('modal--align-top')) {
+        if (m.classList.contains('')) {
             transY = Math.round(mProps.height / 2 + mProps.top - trigProps.top - trigProps.height / 2);
         }
 
@@ -168,12 +167,18 @@ var Modal = (function() {
     var open = function(m, div) {
 
         if (!isOpen) {
+            // body增加overflow - 第1種方法
+            // document.body.style.overflowY = "hidden";
+
+            // body增加overflow - 第2種方法
+            document.querySelector('body').classList.add('overflow-hidden');
+
             // select the content inside the modal
-            var content = m.querySelector('.modal__content');
+            var content = m.querySelector('.modal-content');
             // reveal the modal
             m.classList.add('modal--active');
             // reveal the modal content
-            content.classList.add('modal__content--active');
+            content.classList.add('modal-content--active');
 
             /**
              * when the modal content is finished transitioning, fadeout the temporary
@@ -195,18 +200,25 @@ var Modal = (function() {
 
     var close = function(event) {
 
+
         event.preventDefault();
         event.stopImmediatePropagation();
 
         var target = event.target;
-        var div = document.getElementById('modal__temp');
+        var div = document.getElementById('modal_temp');
 
         /**
-         * make sure the modal__bg or modal__close was clicked, we don't want to be able to click
+         * make sure the modal-bg or modal-close was clicked, we don't want to be able to click
          * inside the modal and have it close.
          */
 
-        if (isOpen && target.classList.contains('modal__bg') || target.classList.contains('modal__close')) {
+        if (isOpen && target.classList.contains('modal-bg') || target.classList.contains('modal-close')) {
+
+            // body移除overflow - 第1種方法
+            // document.body.style.overflowY = "auto";
+
+            // body移除overflow - 第2種方法
+            document.querySelector('body').classList.remove('overflow-hidden');
 
             // make the hidden div visible again and remove the transforms so it scales back to its original size
             div.style.opacity = '1';
@@ -219,10 +231,10 @@ var Modal = (function() {
 
             for (var i = 0; i < len; i++) {
                 modals[i].classList.remove('modal--active');
-                content[i].classList.remove('modal__content--active');
+                content[i].classList.remove('modal-content--active');
                 trigger[i].style.transform = 'none';
                 trigger[i].style.webkitTransform = 'none';
-                trigger[i].classList.remove('modal__trigger--active');
+                trigger[i].classList.remove('modal-trigger--active');
             }
 
             // when the temporary div is opacity:1 again, we want to remove it from the dom

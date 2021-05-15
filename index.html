@@ -17,129 +17,189 @@
     <header id="top">
         <nav>
             <div class="container">
-                <a href="#top">
-                    <img src="images/logo_w.png" alt="" class="logo">
-                </a>
-                <input type="checkbox" id="check">
-                <label for="check">
+                <div class="row smooth">
+                    <a href="#top">
+                        <img src="images/logo_w.png" alt="" class="logo">
+                    </a>
+                    <input type="checkbox" id="check">
+                    <label for="check">
                     <div id="mask"></div>
                     <img id="bar" src="images/bar.svg" alt="">
                     <img id="cancel" src="images/exit.svg" alt="">
                 </label>
-                <div class="side-bar">
-                    <ul>
-                        <li><a href="#portfolio">ABOUT ME</a></li>
-                        <li><a href="#project">PROJECT</a></li>
-                        <li><a href="#">SKILLS</a></li>
-                        <li><a href="#">WORK EXPERIENCE</a></li>
-                        <li><a href="#">CONTACT</a></li>
-                    </ul>
-                    <div class="nav-logo">
-                        <a href="index.html"><img src="images/logo.png" alt=""></a>
+                    <div class="side-bar">
+                        <ul>
+                            <li><a href="#portfolio">ABOUT ME</a></li>
+                            <li><a href="#project">PROJECT</a></li>
+                            <li><a href="#skills">SKILLS</a></li>
+                            <li><a href="#">WORK EXPERIENCE</a></li>
+                            <li><a href="#">CONTACT</a></li>
+                        </ul>
+                        <div class="nav-logo">
+                            <a href="#top"><img src="images/logo.png" alt=""></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </nav>
-        <h1 class="big-title translate" data-speed="0.4">HI! I'M TRISTA.</h1>
-        <h1 class="subtitle translate" data-speed="0.3">GRAPHIC & UI DESIGNER</h1>
-        <div class="mouse-icon translate" data-speed="0.2">
-            <div class="wheel"></div>
-        </div>
-        <img src="images/tree.png" class="tree translate" data-speed="-0.3" alt="">
-        <img src="images/mountain.png" class="mountain translate" data-speed="" alt="">
-        <img src="images/bg.png" class="bg translate" data-speed="0.2" alt="">
+        <div class="container-fluid">
+            <div class="row">
+                <h1 class="big-title translate wow animate__animated animate__fadeInUp animate__slow" data-speed="0.4">HI! I'M TRISTA.</h1>
+                <h1 class="subtitle translate wow animate__animated animate__fadeInUp animate__slow" data-speed="0.3">GRAPHIC & UI DESIGNER</h1>
+                <div class="mouse-icon translate wow animate__animated animate__fadeInUp animate__slow" data-speed="0.2">
+                    <div class="wheel"></div>
+                </div>
+                <img src="images/tree.png" class="tree translate wow animate__animated animate__fadeInUp animate__slower" data-speed="-0.3" alt="">
+                <img src="images/mountain.png" class="mountain translate wow animate__animated animate__fadeInUp animate__slower" data-speed="" alt="">
+                <img src="images/bg.png" class="bg translate wow animate__animated animate__fadeIn" data-speed="0.2" alt="">
+            </div>
     </header>
     <!-- portfolio =====================================  -->
     <section class="portfolio" id="portfolio">
-        <div class="shadow"></div>
         <div class="container">
-            <div class="slider wow animate__animated animate__fadeInUp animate__slow">
-                <p class="circle-text">KeepCuriosity&Passion.</p>
-                <div class="slider-container">
-                    <img src="images/pic4.jpg">
-                    <img src="images/pic3.jpg">
-                    <img src="images/pic2.jpg">
-                    <img src="images/pic1.jpg">
+            <div class="row">
+                <div class="shadow"></div>
+                <div class="slider wow animate__animated animate__fadeInUp animate__slow">
+                    <p class="circle-text">KeepCuriosity&Passion.</p>
+                    <div class="slider-container">
+                        <img src="images/pic4.jpg">
+                        <img src="images/pic3.jpg">
+                        <img src="images/pic2.jpg">
+                        <img src="images/pic1.jpg">
+                    </div>
                 </div>
-            </div>
-            <div class="content wow animate__animated animate__fadeInUp">
-                <h2>ABOUT ME
-                    <div class="border"></div>
-                </h2>
-                <p>姓名：張薰予 Trista</p>
-                <p>郵件：trista2015123@gmail.com</p>
-                <p>手機：0987-925-434</p>
-                <p>年齡：1992.09.25 / 28歲</p>
-                <p>興趣：旅遊、吃美食</p>
-                <div class="btn-resume"><a href="#" target="_blank"><span>詳細履歷表</span></a></div>
+                <div class="content wow animate__animated animate__fadeInUp">
+                    <h2>ABOUT ME
+                        <div class="border"></div>
+                    </h2>
+                    <p>姓名：張薰予 Trista</p>
+                    <p>郵件：trista2015123@gmail.com</p>
+                    <p>手機：0987-925-434</p>
+                    <p>年齡：1992.09.25 / 28歲</p>
+                    <p>興趣：旅遊、吃美食</p>
+                    <a href="" data-modal="#modalresume" class="modal-trigger btn-resume">詳細履歷表<img src="images/link_w.svg" alt=""></a>
+                </div>
             </div>
         </div>
     </section>
     <!-- project =====================================  -->
     <section class="project" id="project">
         <div class="container">
-            <h2>專案作品<br>PROJECT</h2>
-            <div class="project-box">
-                <div class="project-img">
-                    <a href="" data-modal="#modal" class="modal__trigger">
-                        <div class="title">
-                            <div class="title-center">
-                                <p>WEBSITE</p>
-                                <h3>木的生活 MOOD</h3>
+            <div class="row">
+                <h2 class="wow animate__animated animate__fadeInUp">專案作品<br>PROJECT</h2>
+                <div class="project-box wow animate__animated animate__fadeInUp">
+                    <div class="project-img">
+                        <a href="" data-modal="#modal" class="modal-trigger">
+                            <div class="title">
+                                <div class="title-center">
+                                    <p>WEBSITE</p>
+                                    <h3>木的生活 MOOD</h3>
+                                </div>
                             </div>
-                        </div>
-                        <img src="images/project1.jpg" alt="">
-                    </a>
+                            <img src="images/project1-1.png" alt="">
+                        </a>
+                    </div>
+                    <h3>WEBSITE</h3>
+                    <p>哈囉你好嗎</p>
+                    <p>哈囉你哈囉你好嗎哈囉你好嗎好嗎</p>
+                    <p>哈囉你好嗎</p>
+                    <p>哈囉你哈囉你好嗎哈囉你好嗎好嗎</p>
+                    <a href="https://trista0925.github.io/project_MOOD/" target="_blank" class="btn-resume">ENTER<img src="images/link_w.svg" alt=""></a>
                 </div>
-                <h3>WEBSITE</h3>
-                <p>哈囉你好嗎</p>
-                <p>哈囉你哈囉你好嗎哈囉你好嗎好嗎</p>
-                <p>哈囉你好嗎</p>
-                <p>哈囉你哈囉你好嗎哈囉你好嗎好嗎</p>
-            </div>
-            <div class="project-box">
-                <div class="project-img">
-                    <a href="" data-modal="#modal2" class="modal__trigger">
-                        <div class="title">
-                            <div class="title-center">
-                                <p>WEBSITE</p>
-                                <h3>行動管理員 CONCIERGE</h3>
-
+                <div class="project-box wow animate__animated animate__fadeInUp animate__slow">
+                    <div class="project-img">
+                        <a href="" data-modal="#modal2" class="modal-trigger">
+                            <div class="title">
+                                <div class="title-center">
+                                    <p>WEBSITE</p>
+                                    <h3>行動管理員 CONCIERGE</h3>
+                                </div>
                             </div>
-                        </div>
-                        <img src="images/project2.jpg" alt="">
-                    </a>
+                            <img src="images/project2-1.png" alt="">
+                        </a>
+                    </div>
+                    <h3>WEBSITE</h3>
+                    <p>哈囉你好嗎</p>
+                    <p>哈囉你哈囉你好嗎哈囉你好嗎好嗎</p>
+                    <p>哈囉你好嗎</p>
+                    <p>哈囉你哈囉你好嗎哈囉你好嗎好嗎</p>
+                    <a href="http://concierge.10001mb.com/index.php" target="_blank" class="btn-resume">ENTER<img src="images/link_w.svg" alt=""></a>
                 </div>
-                <h3>WEBSITE</h3>
-                <p>哈囉你好嗎</p>
-                <p>哈囉你哈囉你好嗎哈囉你好嗎好嗎</p>
-                <p>哈囉你好嗎</p>
-                <p>哈囉你哈囉你好嗎哈囉你好嗎好嗎</p>
-            </div>
-            <div class="project-box">
-                <div class="project-img">
-                    <a href="" data-modal="#modal3" class="modal__trigger">
-                        <div class="title">
-                            <div class="title-center">
-                                <p>GRAPHIC DESIGN</p>
-                                <h3>平面設計作品</h3>
+                <div class="project-box wow animate__animated animate__fadeInUp animate__slower">
+                    <div class="project-img">
+                        <a href="" data-modal="#modal3" class="modal-trigger">
+                            <div class="title">
+                                <div class="title-center">
+                                    <p>GRAPHIC DESIGN</p>
+                                    <h3>平面設計作品</h3>
+                                </div>
                             </div>
-                        </div>
-                        <img src="images/project1.jpg" alt="">
-                    </a>
+                            <img src="images/project2-1.png" alt="">
+                        </a>
+                    </div>
+                    <h3>WEBSITE</h3>
+                    <p>哈囉你好嗎</p>
+                    <p>哈囉你哈囉你好嗎哈囉你好嗎好嗎</p>
+                    <p>哈囉你好嗎</p>
+                    <p>哈囉你哈囉你好嗎哈囉你好嗎好嗎</p>
+                    <a href="http://concierge.10001mb.com/index.php" target="_blank" class="btn-resume">ENTER<img src="images/link_w.svg" alt=""></a>
                 </div>
-                <h3>WEBSITE</h3>
-                <p>哈囉你好嗎</p>
-                <p>哈囉你哈囉你好嗎哈囉你好嗎好嗎</p>
-                <p>哈囉你好嗎</p>
-                <p>哈囉你哈囉你好嗎哈囉你好嗎好嗎</p>
             </div>
         </div>
     </section>
-    <!-- Modal -->
-    <div id="modal" class="modal modal--align-top modal__bg" role="dialog" aria-hidden="true">
-        <div class="modal__dialog">
-            <div class="modal__content">
+    <!-- modal =====================================  -->
+    <div id="modalresume" class="modal modal-bg" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <img src="images/Resume.png" alt="" />
+                <!-- modal close button -->
+                <a href="" class="modal-close">
+                    <svg class="" viewBox="0 0 24 24"><path d="M19 6.41l-1.41-1.41-5.59 5.59-5.59-5.59-1.41 1.41 5.59 5.59-5.59 5.59 1.41 1.41 5.59-5.59 5.59 5.59 1.41-1.41-5.59-5.59z"/><path d="M0 0h24v24h-24z" fill="none"/></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="modal" class="modal modal-bg" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <p>WEBSITE</p>
+                <h3>木的生活 MOOD</h3>
+                <img src="images/project1-1.png" alt="">
+                <img src="images/project1-2.png" alt="">
+                <img src="images/project1-3.png" alt="">
+                <img src="images/project1-4.png" alt="">
+                <img src="images/project1-5.png" alt="">
+                <img src="images/project1-6.png" alt="">
+                <!-- modal close button -->
+                <a href="" class="modal-close">
+                    <svg class="" viewBox="0 0 24 24"><path d="M19 6.41l-1.41-1.41-5.59 5.59-5.59-5.59-1.41 1.41 5.59 5.59-5.59 5.59 1.41 1.41 5.59-5.59 5.59 5.59 1.41-1.41-5.59-5.59z"/><path d="M0 0h24v24h-24z" fill="none"/></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal modal-bg" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <p>WEBSITE</p>
+                <h3>行動管理員 CONCIERGE</h3>
+                <img src="images/project2-1.png" alt="">
+                <img src="images/project2-2.png" alt="">
+                <img src="images/project2-3.png" alt="">
+                <img src="images/project2-4.png" alt="">
+                <img src="images/project2-5.png" alt="">
+                <img src="images/project2-6.png" alt="">
+                <!-- modal close button -->
+                <a href="" class="modal-close">
+                    <svg class="" viewBox="0 0 24 24"><path d="M19 6.41l-1.41-1.41-5.59 5.59-5.59-5.59-1.41 1.41 5.59 5.59-5.59 5.59 1.41 1.41 5.59-5.59 5.59 5.59 1.41-1.41-5.59-5.59z"/><path d="M0 0h24v24h-24z" fill="none"/></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal modal-bg" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
                 <h1>Modal</h1>
                 <p>Church-key American Apparel trust fund, cardigan mlkshk small batch Godard mustache pickled bespoke meh seitan. Wes Anderson farm-to-table vegan, kitsch Carles 8-bit gastropub paleo YOLO jean shorts health goth lo-fi. Normcore chambray
                     locavore Banksy, YOLO meditation master cleanse readymade Bushwick.</p>
@@ -150,82 +210,20 @@
                     fund Wes Anderson DIY PBR 8-bit try-hard +1 Shoreditch lo-fi tote bag.</p>
                 <p><img src="http://unsplash.it/600/300" alt="" /></p>
                 <!-- modal close button -->
-                <a href="" class="modal__close demo-close">
+                <a href="" class="modal-close">
                     <svg class="" viewBox="0 0 24 24"><path d="M19 6.41l-1.41-1.41-5.59 5.59-5.59-5.59-1.41 1.41 5.59 5.59-5.59 5.59 1.41 1.41 5.59-5.59 5.59 5.59 1.41-1.41-5.59-5.59z"/><path d="M0 0h24v24h-24z" fill="none"/></svg>
                 </a>
             </div>
         </div>
     </div>
-
-    <div id="modal2" class="modal modal--align-top modal__bg" role="dialog" aria-hidden="true">
-        <div class="modal__dialog">
-            <div class="modal__content">
-                <h1>Big Modal</h1>
-                <h3>This modal is pretty tall.</h3>
-                <p>Selfies normcore four dollar toast four loko listicle artisan. Hoodie Marfa authentic, wayfarers church-key tofu Banksy pop-up Kickstarter Brooklyn heirloom swag synth. Echo Park cray synth mixtape. Tofu gastropub squid readymade, trust
-                    fund Wes Anderson DIY PBR 8-bit try-hard +1 Shoreditch lo-fi tote bag.</p>
-                <p><img src="http://unsplash.it/600/300" alt="" /></p>
-                <p>Mumblecore cred selfies fingerstache. Tousled skateboard plaid lo-fi shabby chic salvia, swag Odd Future Etsy art party Austin cronut. Crucifix whatever Pinterest food truck, pickled viral cray 90's DIY chambray keffiyeh biodiesel Vice
-                    blog. Cred meh yr tofu.</p>
-                <p>Mumblecore cred selfies fingerstache. Tousled skateboard plaid lo-fi shabby chic salvia, swag Odd Future Etsy art party Austin cronut. Crucifix whatever Pinterest food truck, pickled viral cray 90's DIY chambray keffiyeh biodiesel Vice
-                    blog. Cred meh yr tofu.</p>
-                <p>Selfies normcore four dollar toast four loko listicle artisan. Hoodie Marfa authentic, wayfarers church-key tofu Banksy pop-up Kickstarter Brooklyn heirloom swag synth. Echo Park cray synth mixtape. Tofu gastropub squid readymade, trust
-                    fund Wes Anderson DIY PBR 8-bit try-hard +1 Shoreditch lo-fi tote bag.</p>
-                <p><img src="http://unsplash.it/600/300" alt="" /></p>
-                <p>Selfies normcore four dollar toast four loko listicle artisan. Hoodie Marfa authentic, wayfarers church-key tofu Banksy pop-up Kickstarter Brooklyn heirloom swag synth. Echo Park cray synth mixtape. Tofu gastropub squid readymade, trust
-                    fund Wes Anderson DIY PBR 8-bit try-hard +1 Shoreditch lo-fi tote bag.</p>
-                <p><img src="http://unsplash.it/600/300" alt="" /></p>
-                <!-- modal close button -->
-                <a href="" class="modal__close demo-close">
-                    <svg class="" viewBox="0 0 24 24"><path d="M19 6.41l-1.41-1.41-5.59 5.59-5.59-5.59-1.41 1.41 5.59 5.59-5.59 5.59 1.41 1.41 5.59-5.59 5.59 5.59 1.41-1.41-5.59-5.59z"/><path d="M0 0h24v24h-24z" fill="none"/></svg>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <div id="modal3" class="modal modal--align-top modal__bg" role="dialog" aria-hidden="true">
-        <div class="modal__dialog">
-            <div class="modal__content">
-                <h1>Modal</h1>
-                <p>Church-key American Apparel trust fund, cardigan mlkshk small batch Godard mustache pickled bespoke meh seitan. Wes Anderson farm-to-table vegan, kitsch Carles 8-bit gastropub paleo YOLO jean shorts health goth lo-fi. Normcore chambray
-                    locavore Banksy, YOLO meditation master cleanse readymade Bushwick.</p>
-                <p>Selfies normcore four dollar toast four loko listicle artisan. Hoodie Marfa authentic, wayfarers church-key tofu Banksy pop-up Kickstarter Brooklyn heirloom swag synth. Echo Park cray synth mixtape. Tofu gastropub squid readymade, trust
-                    fund Wes Anderson DIY PBR 8-bit try-hard +1 Shoreditch lo-fi tote bag.</p>
-                <p><img src="http://unsplash.it/600/300" alt="" /></p>
-                <p>Selfies normcore four dollar toast four loko listicle artisan. Hoodie Marfa authentic, wayfarers church-key tofu Banksy pop-up Kickstarter Brooklyn heirloom swag synth. Echo Park cray synth mixtape. Tofu gastropub squid readymade, trust
-                    fund Wes Anderson DIY PBR 8-bit try-hard +1 Shoreditch lo-fi tote bag.</p>
-                <p><img src="http://unsplash.it/600/300" alt="" /></p>
-                <!-- modal close button -->
-                <a href="" class="modal__close demo-close">
-                    <svg class="" viewBox="0 0 24 24"><path d="M19 6.41l-1.41-1.41-5.59 5.59-5.59-5.59-1.41 1.41 5.59 5.59-5.59 5.59 1.41 1.41 5.59-5.59 5.59 5.59 1.41-1.41-5.59-5.59z"/><path d="M0 0h24v24h-24z" fill="none"/></svg>
-                </a>
-            </div>
-        </div>
-    </div>
-    <!-- portfolio =====================================  -->
-    <section class="portfolio" id="portfolio">
+    <!-- skills =====================================  -->
+    <section class="skills" id="skills">
         <div class="container">
-            <div class="slider wow animate__animated animate__fadeInUp animate__slow">
-                <p class="circle-text">KeepCuriosity&Passion.</p>
-                <div class="slider-container">
-                    <img src="images/pic4.jpg">
-                    <img src="images/pic3.jpg">
-                    <img src="images/pic2.jpg">
-                    <img src="images/pic1.jpg">
-                </div>
-            </div>
-            <div class="content wow animate__animated animate__fadeInUp">
-                <h2>ABOUT ME
-                    <div class="border"></div>
-                </h2>
-                <p>姓名：張薰予 Trista<br> 郵件：trista2015123@gmail.com
-                    <br> 手機：0987-925-434
-                    <br> 年齡：1992.09.25 / 28歲<br>興趣：旅遊、吃美食
-                </p>
+            <div class="row">
+                <h2>專業技能<br>SKILLS</h2>
             </div>
         </div>
     </section>
-
     <script src="js/index.js"></script>
     <script src="js/wow.min.js"></script>
     <script>
