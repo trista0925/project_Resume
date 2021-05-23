@@ -47,7 +47,7 @@ window.addEventListener('scroll', () => {
 const text = document.querySelector('.circle-text');
 text.innerHTML = text.textContent.replace(/\S/g, "<span>$&</span>");
 
-const element = document.querySelectorAll('span');
+const element = document.querySelectorAll('.circle-text span');
 for (let i = 0; i < element.length; i++) {
     element[i].style.transform = "rotate(" + i * 16.5 + "deg)"
 }

@@ -11,6 +11,7 @@
 body {
     letter-spacing: 0.1rem;
     overflow-x: hidden;
+    color: #293242;
 }
 
 .overflow-hidden {
@@ -50,6 +51,7 @@ body {
 .row {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 a {
@@ -78,7 +80,7 @@ p {
     line-height: 30px;
 }
 
-.btn-resume {
+.content .btn-resume {
     display: block;
     line-height: 35px;
     height: 35px;
@@ -94,13 +96,13 @@ p {
     transition: all .3s;
 }
 
-.btn-resume img {
+.content .btn-resume img {
     width: 25px;
     padding-left: 2px;
     vertical-align: middle;
 }
 
-.btn-resume:hover {
+.content .btn-resume:hover {
     background-color: #6e868e;
 }
 
@@ -647,6 +649,7 @@ label #cancel {
 
 .project {
     width: 100%;
+    padding: 80px 0;
     background-color: #a6b4b3;
     position: relative;
 }
@@ -654,63 +657,108 @@ label #cancel {
 .project .row {
     min-height: 100vh;
     align-content: center;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 }
 
 .project .container h2 {
     width: 100%;
-    padding: 80px 0 20px 0;
     color: #293242;
     font-size: 1.5rem;
     text-align: center;
 }
 
 .project-box {
-    padding: 20px 15px 80px 15px;
+    width: 350px;
     text-align: center;
+    padding: 30px 15px 0 15px;
 }
 
-.project-box .btn-resume {
-    width: 110px;
+.project-box h3 {
+    padding: 10px 0;
+}
+
+.project-box p {
+    font-size: 0.95rem;
+    font-weight: 700;
+    padding-top: 10px;
+    text-align: left;
+}
+
+.project-box>span {
+    display: block;
     font-size: 0.9rem;
-    letter-spacing: 0.1rem;
-    margin: 10px auto;
+    line-height: 22px;
+    text-align: left;
 }
 
-.project-img {
-    width: 340px;
-    height: 230px;
-    margin-bottom: 20px;
+.project-box .project-img {
+    width: 320px;
+    height: 220px;
+    margin: auto;
+}
+
+.project-box .img1 {
+    background-image: url(../images/project1-1.jpg);
+    background-size: cover;
+}
+
+.project-box .img2 {
+    background-image: url(../images/project2-1.jpg);
+    background-size: cover;
+}
+
+.project-box .img3 {
+    background-image: url(../images/project1-1.jpg);
+    background-size: cover;
+}
+
+.project-box .project-content {
+    display: inline-block;
     position: relative;
-    overflow: hidden;
 }
 
-.title {
-    background: rgba(255, 255, 255, 0.7);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    opacity: 0;
-    transition: all 0.5s;
-    color: #293242;
+.project-box .project-content .btn-project {
+    display: inline-block;
+    width: 70px;
+    height: 35px;
+    text-decoration: none;
+    background: #293242;
+    font-size: 0.85rem;
+    color: #e9e9e9;
+    border-radius: 30px;
+    -webkit-transition: all .3s;
+    transition: all .3s;
 }
 
-.title:hover {
+.project-box .project-content .btn-project:hover {
+    background-color: #6e868e;
+}
+
+.project-box .project-content a img {
     opacity: 1;
+    width: 25px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    transition: opacity 0.3s ease;
 }
 
-.title::before {
-    content: '';
-    height: 100%;
-    display: inline-block;
-    vertical-align: middle;
+.project-box .project-content a:hover img {
+    opacity: 0;
 }
 
-.title-center {
-    display: inline-block;
-    vertical-align: middle;
+.project-box .project-content a span {
+    opacity: 0;
+    line-height: 35px;
+}
+
+.project-box .project-content a:hover span {
+    opacity: 1;
+    transition: opacity 0.3s ease;
 }
 
 
@@ -746,8 +794,8 @@ label #cancel {
 /* modal內容 */
 
 .modal-dialog {
-    max-width: 1000px;
-    padding: 1.2rem;
+    width: 80%;
+    padding: 1rem;
 }
 
 .modal-content {
@@ -763,12 +811,23 @@ label #cancel {
     transition: all 0.25s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.modal-content h3::after {
+.modal-content span {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: normal;
+    line-height: 30px;
+}
+
+.modal-content p {
+    text-align: left;
+    padding-top: 20px;
+}
+
+.modal-content p::after {
     content: '';
     display: block;
-    margin: 20px auto;
-    width: 30px;
-    border-bottom: #293242 1px solid;
+    width: 100%;
+    border-bottom: #6e868e 1px solid;
 }
 
 .modal-content img {
@@ -820,6 +879,16 @@ label #cancel {
 
 .modal-close:hover {
     background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-p img {
+    width: 485px;
+    padding: 10px 0;
+}
+
+.modal-m img {
+    width: 185px;
+    padding: 10px 0;
 }
 
 
