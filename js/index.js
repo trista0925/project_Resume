@@ -3,13 +3,13 @@ const big_title = document.querySelector(".big-title");
 const header = document.querySelector("header");
 const shadow = document.querySelector(".shadow");
 const section = document.querySelector("section");
-const border = document.querySelector(".border");
+// const border = document.querySelector(".border");
 // const content = document.querySelector(".content");
 // const image_container = document.querySelector(".img-container");
 // const opacity = document.querySelectorAll(".opacity");
 
 let header_height = header.offsetHeight;
-let section_height = section.offsetHeight;
+// let section_height = section.offsetHeight;
 
 window.addEventListener('scroll', () => {
     let scroll = window.pageYOffset;
@@ -23,8 +23,8 @@ window.addEventListener('scroll', () => {
     // 陰影效果
     shadow.style.height = `${scroll * 0.5 + 300}px`;
 
-    // 標題分隔線
-    border.style.width = `${scroll / (sectionY.top + section_height) * 100}%`;
+    // // 標題分隔線
+    // border.style.width = `${scroll / (sectionY.top + section_height) * 100}%`;
 
     // 標題文字淡出效果
     // big_title.style.opacity = - scroll / (header_height / 2) + 1;

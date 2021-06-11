@@ -54,6 +54,11 @@ body {
     justify-content: space-between;
 }
 
+.col-half {
+    flex: 0 0 50%;
+    max-width: 49%;
+}
+
 a {
     text-decoration: none;
 }
@@ -64,20 +69,35 @@ img {
 }
 
 h2 {
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     font-weight: 600;
-    line-height: 38px;
+    font-family: 'Philosopher', sans-serif;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 35px;
+    margin: 20px auto;
 }
 
 h3 {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     font-weight: 600;
     line-height: 36px;
 }
 
+h4 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    line-height: 26px;
+}
+
 p {
-    font-size: 0.95rem;
-    line-height: 30px;
+    display: block;
+    font-size: 0.85rem;
+    line-height: 24px;
+    text-align: left;
 }
 
 .content .btn-resume {
@@ -85,7 +105,7 @@ p {
     line-height: 35px;
     height: 35px;
     width: 130px;
-    margin: 10px 0;
+    margin: 15px 0;
     text-decoration: none;
     background: #293242;
     font-size: 0.85rem;
@@ -133,11 +153,34 @@ nav {
     z-index: 11;
 }
 
+
+/* 平板 & 手機 */
+
+@media (max-width: 768px) {
+    nav {
+        position: fixed;
+        height: 60px;
+        background: #293242;
+    }
+}
+
 .logo {
     position: fixed;
     left: 40px;
     top: 30px;
     width: 50px;
+}
+
+
+/* 平板 & 手機 */
+
+@media (max-width: 768px) {
+    .logo {
+        position: fixed;
+        left: 20px;
+        top: 10px;
+        width: 40px;
+    }
 }
 
 
@@ -154,7 +197,7 @@ nav {
 }
 
 .side-bar ul {
-    margin: 40px 0;
+    margin: 10px 0;
     list-style-type: none;
 }
 
@@ -193,7 +236,7 @@ nav {
 
 .side-bar .nav-logo {
     text-align: center;
-    margin: 20px;
+    margin-top: 30px;
 }
 
 .side-bar .nav-logo img {
@@ -227,6 +270,17 @@ label #bar {
     right: 40px;
     top: 40px;
     transition: all 0.5s;
+}
+
+
+/* 平板 & 手機 */
+
+@media (max-width: 768px) {
+    label #bar {
+        width: 25px;
+        right: 20px;
+        top: 20px;
+    }
 }
 
 label #cancel {
@@ -265,21 +319,22 @@ label #cancel {
     /* 滑鼠效果 */
     .mouse-icon {
         position: absolute;
-        left: 50%;
+        left: 0;
+        right: 0;
         top: 60%;
-        border: 2px solid #e9e9e9;
+        margin: auto;
+        border: 1px solid #e9e9e9;
         border-radius: 16px;
-        height: 40px;
-        width: 24px;
-        margin-left: -12px;
+        height: 35px;
+        width: 23px;
         z-index: 4;
     }
     .mouse-icon .wheel {
         position: relative;
         border-radius: 10px;
         background: #e9e9e9;
-        width: 2px;
-        height: 6px;
+        width: 1px;
+        height: 5px;
         margin: 0 auto;
         animation-name: drop;
         -webkit-animation-duration: 1s;
@@ -341,7 +396,7 @@ label #cancel {
         top: 25%;
         width: 100%;
         text-align: center;
-        font-size: 4.5rem;
+        font-size: 4.2rem;
         font-weight: normal;
         color: #e9e9e9;
         z-index: 2;
@@ -351,7 +406,7 @@ label #cancel {
         top: 45%;
         width: 100%;
         text-align: center;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         font-weight: 300;
         color: #e9e9e9;
         z-index: 2;
@@ -388,7 +443,7 @@ label #cancel {
         top: 30%;
         width: 100%;
         text-align: center;
-        font-size: 5.5rem;
+        font-size: 4.5rem;
         font-weight: normal;
         color: #e9e9e9;
         z-index: 2;
@@ -398,7 +453,7 @@ label #cancel {
         top: 45%;
         width: 100%;
         text-align: center;
-        font-size: 2rem;
+        font-size: 1.6rem;
         font-weight: 300;
         color: #e9e9e9;
         z-index: 2;
@@ -512,9 +567,17 @@ label #cancel {
     transform-origin: 0 50px;
 }
 
-.portfolio h2 {
-    width: 50%;
+.portfolio .title {
+    font-size: 1.5rem;
     overflow: hidden;
+}
+
+.portfolio .title::after {
+    content: '';
+    display: block;
+    width: 100%;
+    border-bottom: #a6b4b3 1px solid;
+    margin: 15px 0;
 }
 
 .portfolio .border {
@@ -543,7 +606,7 @@ label #cancel {
         height: 350px;
     }
     .portfolio .slider::before {
-        content: "";
+        content: '';
         display: block;
         position: relative;
         left: 4%;
@@ -565,7 +628,7 @@ label #cancel {
         height: 300px;
     }
     .portfolio .slider::before {
-        content: "";
+        content: '';
         display: block;
         position: relative;
         left: 5%;
@@ -649,9 +712,9 @@ label #cancel {
 
 .project {
     width: 100%;
-    padding: 80px 0;
     background-color: #a6b4b3;
     position: relative;
+    padding: 80px 0;
 }
 
 .project .row {
@@ -663,32 +726,36 @@ label #cancel {
 
 .project .container h2 {
     width: 100%;
+    padding-bottom: 30px;
     color: #293242;
-    font-size: 1.5rem;
     text-align: center;
+}
+
+.project .container h2::after {
+    border-bottom: #293242 1px solid;
 }
 
 .project-box {
     width: 350px;
     text-align: center;
-    padding: 30px 15px 0 15px;
+    padding: 15px;
+}
+
+
+/* 平板 */
+
+@media (min-width: 577px) and (max-width: 1024px) {
+    .project-box {
+        width: 80%;
+    }
 }
 
 .project-box h3 {
-    padding: 10px 0;
+    padding: 15px 0;
 }
 
-.project-box p {
-    font-size: 0.95rem;
-    font-weight: 700;
-    padding-top: 10px;
-    text-align: left;
-}
-
-.project-box>span {
-    display: block;
-    font-size: 0.9rem;
-    line-height: 22px;
+.project-box h4 {
+    padding-top: 15px;
     text-align: left;
 }
 
@@ -699,17 +766,17 @@ label #cancel {
 }
 
 .project-box .img1 {
-    background-image: url(../images/project1-1.jpg);
+    background-image: url(../images/project_MOOD/project1-1.jpg);
     background-size: cover;
 }
 
 .project-box .img2 {
-    background-image: url(../images/project2-1.jpg);
+    background-image: url(../images/project_Concierge/project2-1.jpg);
     background-size: cover;
 }
 
 .project-box .img3 {
-    background-image: url(../images/project1-1.jpg);
+    background-image: url(../images/VisualDesign/design.jpg);
     background-size: cover;
 }
 
@@ -882,12 +949,12 @@ label #cancel {
 }
 
 .modal-p img {
-    width: 485px;
+    max-width: 49%;
     padding: 10px 0;
 }
 
 .modal-m img {
-    width: 185px;
+    max-width: 19%;
     padding: 10px 0;
 }
 
@@ -896,8 +963,19 @@ label #cancel {
 
 .skills {
     width: 100%;
-    background-color: #111111;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgb(0, 0, 0, 0.3)), url(../images/bg.png);
+    background-size: cover;
+    background-attachment: fixed;
     position: relative;
+}
+
+
+/* 平板 & 手機 */
+
+@media (max-width: 768px) {
+    .skills {
+        padding: 80px 0;
+    }
 }
 
 .skills .row {
@@ -909,8 +987,429 @@ label #cancel {
 
 .skills .container h2 {
     width: 100%;
-    padding: 80px 0 20px 0;
+    padding-bottom: 30px;
     color: #a6b4b3;
-    font-size: 1.5rem;
+    text-align: center;
+}
+
+.skills .container h2::after {
+    border-bottom: #a6b4b3 1px solid;
+}
+
+.skills .skills-box {
+    width: 310px;
+    height: 310px;
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    background: rgb(41, 50, 66, 0.7);
+    border-radius: 20px;
+}
+
+
+/* 平板 */
+
+@media (min-width: 577px) and (max-width: 1024px) {
+    .skills .skills-box {
+        width: 60%;
+    }
+}
+
+.skills .skills-img {
+    width: 85px;
+    height: 85px;
+    border: #a6b4b3 1px solid;
+    border-radius: 50%;
+    margin: auto;
+    line-height: 120px;
+}
+
+.skills img {
+    width: 45px;
+}
+
+.skills h3 {
+    padding: 15px 0;
+    color: #a6b4b3;
+}
+
+.skills p {
+    padding: 0 30px;
+    color: #a6b4b3;
+}
+
+
+/* experience ===================================== */
+
+.experience {
+    width: 100%;
+    background-color: #a6b4b3;
+    position: relative;
+    padding: 80px 0;
+}
+
+.experience .row {
+    min-height: 100vh;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.experience .container h2 {
+    width: 100%;
+    padding-bottom: 60px;
+    color: #293242;
+    text-align: center;
+}
+
+.experience .container h2::after {
+    border-bottom: #293242 2px solid;
+}
+
+.timeline {
+    position: relative;
+    width: 100%;
+    width: 1000px;
+    margin: 0 auto;
+    list-style-type: none;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 0 auto;
+    display: block;
+    height: 100%;
+    width: 2px;
+    background: #e9e9e9;
+}
+
+
+/* 平板 & 手機 */
+
+@media (max-width: 768px) {
+    .timeline li {
+        padding: 35px 0;
+    }
+}
+
+.timeline li::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.timeline .direction-l {
+    position: relative;
+    width: 480px;
+    float: left;
+    text-align: right;
+}
+
+.timeline .direction-r {
+    position: relative;
+    width: 480px;
+    float: right;
+    text-align: left;
+}
+
+
+/* 平板 & 手機 */
+
+@media (max-width: 768px) {
+    .timeline .direction-l,
+    .timeline .direction-r {
+        width: 100%;
+        float: none;
+    }
+}
+
+.timeline .flag-wrapper {
+    display: inline-block;
+    position: relative;
+    top: -6px;
+}
+
+
+/* 平板 & 手機 */
+
+@media (max-width: 768px) {
+    .timeline .flag-wrapper {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.timeline .hexa {
+    position: absolute;
+    top: 4px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #6e868e;
+}
+
+.timeline .direction-r .hexa {
+    left: -26px;
+}
+
+.timeline .direction-l .hexa {
+    right: -26px;
+}
+
+
+/* 平板 & 手機 */
+
+@media (max-width: 768px) {
+    .timeline .hexa {
+        top: -35px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+    .timeline .direction-r .hexa {
+        left: 0;
+    }
+    .timeline .direction-l .hexa {
+        right: 0;
+    }
+}
+
+.timeline .flag {
+    position: relative;
+    background: #e9e9e9;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 6px 10px;
+    text-align: left;
+    border-radius: 5px;
+}
+
+
+/* 平板 & 手機 */
+
+@media (max-width: 768px) {
+    .timeline .flag {
+        top: -10px;
+    }
+}
+
+.timeline .direction-l .flag {
+    -webkit-box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
+    box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
+}
+
+.timeline .direction-r .flag {
+    -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
+}
+
+.timeline .direction-l .flag::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -15px;
+    margin-top: -8px;
+    border: solid transparent;
+    border-left-color: #e9e9e9;
+    border-width: 8px;
+}
+
+.timeline .direction-r .flag::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    margin-top: -8px;
+    border: solid transparent;
+    border-right-color: #e9e9e9;
+    border-width: 8px;
+}
+
+
+/* 平板 & 手機 */
+
+@media (max-width: 768px) {
+    .timeline .direction-l .flag::after,
+    .timeline .direction-r .flag::after {
+        top: -6px;
+        left: 50%;
+        width: 0;
+        margin-left: -8px;
+        border: solid transparent;
+        border-bottom-color: #e9e9e9;
+        border-width: 8px;
+    }
+}
+
+.timeline .time-wrapper {
+    display: inline;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.timeline .direction-l .time-wrapper {
+    float: left;
+}
+
+.timeline .direction-r .time-wrapper {
+    float: right;
+}
+
+.timeline .time {
+    font-size: 0.9rem;
+    font-weight: 300;
+    padding: 5px 10px;
+    background: #6e868e;
+    line-height: 15px;
+    color: #e9e9e9;
+}
+
+
+/* 平板 & 手機 */
+
+@media (max-width: 768px) {
+    .timeline .direction-l .time-wrapper,
+    .timeline .direction-r .time-wrapper {
+        float: none;
+    }
+    .timeline .time-wrapper {
+        display: block;
+    }
+}
+
+.desc {
+    padding: 15px;
+    margin: 20px 0;
+    line-height: 25px;
+    border-radius: 10px;
+    background: #e9e9e9;
+}
+
+
+/* 平板 & 手機 */
+
+@media (max-width: 768px) {
+    .desc {
+        margin: -5px 20px;
+    }
+}
+
+
+/* contact ===================================== */
+
+.contact {
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgb(0, 0, 0, 0.3)), url(../images/bg.png);
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.contact .row {
+    min-height: 100vh;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact .container h2 {
+    width: 100%;
+    padding-bottom: 30px;
+    color: #a6b4b3;
+    text-align: center;
+}
+
+.contact .container h2::after {
+    border-bottom: #a6b4b3 1px solid;
+}
+
+.contact form {
+    width: 700px;
+    margin: 20px;
+    background-color: rgba(166, 180, 179, 0.7);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.contact .name,
+.contact .email,
+.contact .message,
+.contact .send {
+    padding: 10px;
+    font-size: 0.7rem;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    letter-spacing: 0.1rem;
+    border-radius: 15px;
+}
+
+.contact .name,
+.contact .email {
+    width: 240px;
+    margin: 25px 5px 10px;
+}
+
+.contact .message,
+.contact .send {
+    display: block;
+    border: none;
+}
+
+.contact .message {
+    width: 500px;
+    margin: 10px auto;
+    height: auto;
+    overflow: auto;
+    resize: vertical;
+    line-height: 20px;
+}
+
+.contact .send {
+    width: 100px;
+    margin: 25px auto;
+    border-radius: 30px;
+    background-color: #293242;
+    color: #e9e9e9;
+    font-size: 0.85rem;
+    cursor: pointer;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+.contact .send:hover {
+    color: #6e868e;
+    background-color: #e9e9e9;
+}
+
+
+/* 手機 */
+
+@media (max-width: 576px) {
+    .contact .name,
+    .contact .email,
+    .contact .message {
+        width: 100%;
+        margin: 10px auto;
+    }
+}
+
+
+/* footer ===================================== */
+
+.footer {
+    width: 100%;
+    background-color: #a6b4b3;
+    padding: 40px 0;
+}
+
+.footer p {
     text-align: center;
 }

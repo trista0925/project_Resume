@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=3.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" href="images/logo.png">
+    <link rel="icon" href="images/logo/logo.png">
     <title>Trista Portfolio</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/animate.css">
@@ -19,25 +19,25 @@
             <div class="container">
                 <div class="row smooth">
                     <a href="#top">
-                        <img src="images/logo_w.png" alt="" class="logo">
+                        <img src="images/logo/logo_w.png" alt="" class="logo">
                     </a>
                     <input type="checkbox" id="check">
                     <label for="check">
-                    <div id="mask"></div>
-                    <img id="bar" src="images/bar.svg" alt="">
-                    <img id="cancel" src="images/exit.svg" alt="">
-                </label>
+                        <div id="mask"></div>
+                        <img id="bar" src="images/icon/bar.svg" alt="">
+                        <img id="cancel" src="images/icon/exit.svg" alt="">
+                    </label>
                     <div class="side-bar">
+                        <div class="nav-logo">
+                            <a href="#top"><img src="images/logo/logo.png" alt=""></a>
+                        </div>
                         <ul>
                             <li><a href="#portfolio">ABOUT ME</a></li>
                             <li><a href="#project">PROJECT</a></li>
                             <li><a href="#skills">SKILLS</a></li>
-                            <li><a href="#">WORK EXPERIENCE</a></li>
-                            <li><a href="#">CONTACT</a></li>
+                            <li><a href="#experience">EXPERIENCE</a></li>
+                            <li><a href="#contact">CONTACT</a></li>
                         </ul>
-                        <div class="nav-logo">
-                            <a href="#top"><img src="images/logo.png" alt=""></a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -45,7 +45,7 @@
         <div class="container-fluid">
             <div class="row">
                 <h1 class="big-title translate wow animate__animated animate__fadeInUp animate__slow" data-speed="0.4">HI! I'M TRISTA.</h1>
-                <h1 class="subtitle translate wow animate__animated animate__fadeInUp animate__slow" data-speed="0.3">GRAPHIC & UI DESIGNER</h1>
+                <h1 class="subtitle translate wow animate__animated animate__fadeInUp animate__slow" data-speed="0.3">VISUAL & UI DESIGNER</h1>
                 <div class="mouse-icon translate wow animate__animated animate__fadeInUp animate__slow" data-speed="0.2">
                     <div class="wheel"></div>
                 </div>
@@ -69,15 +69,13 @@
                     </div>
                 </div>
                 <div class="content wow animate__animated animate__fadeInUp">
-                    <h2>ABOUT ME
-                        <div class="border"></div>
-                    </h2>
+                    <h2 class="title">ABOUT ME</h2>
                     <p>姓名：張薰予 Trista</p>
                     <p>郵件：trista2015123@gmail.com</p>
                     <p>手機：0987-925-434</p>
                     <p>年齡：1992.09.25 / 28歲</p>
                     <p>興趣：旅遊、吃美食</p>
-                    <a href="" data-modal="#modalresume" class="modal-trigger btn-resume">詳細履歷表<img src="images/link_w.svg" alt=""></a>
+                    <a href="" data-modal="#modalresume" class="modal-trigger btn-resume">詳細履歷表<img src="images/icon/link_w.svg" alt=""></a>
                 </div>
             </div>
         </div>
@@ -86,7 +84,7 @@
     <section class="project" id="project">
         <div class="container">
             <div class="row">
-                <h2 class="wow animate__animated animate__fadeInUp">專案作品<br>PROJECT</h2>
+                <h2 class="wow animate__animated animate__fadeInUp">PROJECT</h2>
                 <div class="project-box wow animate__animated animate__fadeInUp">
                     <a href="https://trista0925.github.io/project_MOOD/" target="_blank">
                         <div class="project-img img1"></div>
@@ -94,28 +92,28 @@
                     <h3>木的生活 MOOD</h3>
                     <div class="project-content">
                         <a href="" data-modal="#modal" class="modal-trigger btn-project">
-                            <img src="images/detail_w.svg" alt="">
+                            <img src="images/icon/detail_w.svg" alt="">
                             <span>預覽</span>
                         </a>
                     </div>
                     <div class="project-content">
                         <a href="https://trista0925.github.io/project_MOOD/" target="_blank" class="btn-project">
-                            <img src="images/homepage_w.svg" alt="">
+                            <img src="images/icon/homepage_w.svg" alt="">
                             <span>網站</span>
                         </a>
                     </div>
                     <div class="project-content">
                         <a href="https://github.com/trista0925/project_MOOD" target="_blank" class="btn-project">
-                            <img src="images/github_w.svg" alt="">
+                            <img src="images/icon/github_w.svg" alt="">
                             <span>原始碼</span>
                         </a>
                     </div>
-                    <p>專案簡介</p>
-                    <span>以大地色系、木質打造的質感選物店鋪。品牌名稱「MOOD」與中文「木的」相呼應，希望將木質溫暖的形象藉由生活小物讓心情獲得大自然的療癒。</span>
-                    <p>製作項目</p>
-                    <span>UI介面設計、RWD切版、網頁動態效果</span>
-                    <p>相關技術</p>
-                    <span>HTML / CSS / Bootstrap Grid / JavaScript / jQuery</span>
+                    <h4>專案簡介</h4>
+                    <p>以大地色系、木質打造的質感選物店鋪。品牌名稱「MOOD」與中文「木的」相呼應，希望將木質溫暖的形象藉由生活小物讓心情獲得大自然的療癒。</p>
+                    <h4>製作項目</h4>
+                    <p>UI介面設計、RWD切版、網頁動態效果</p>
+                    <h4>相關技術</h4>
+                    <p>HTML / CSS / Bootstrap Grid / JavaScript / jQuery</p>
                 </div>
                 <div class="project-box wow animate__animated animate__fadeInUp animate__slow">
                     <a href="http://concierge.10001mb.com/" target="_blank">
@@ -124,37 +122,43 @@
                     <h3>行動管理員 CONCIERGE</h3>
                     <div class="project-content">
                         <a href="" data-modal="#modal2" class="modal-trigger btn-project">
-                            <img src="images/detail_w.svg" alt=""><span>預覽</span>
+                            <img src="images/icon/detail_w.svg" alt=""><span>預覽</span>
                         </a>
                     </div>
                     <div class="project-content">
-                        <a href="http://concierge.10001mb.com/" target="_blank" class="btn-project"><img src="images/homepage_w.svg" alt=""><span>網站</span></a>
+                        <a href="http://concierge.10001mb.com/" target="_blank" class="btn-project"><img src="images/icon/homepage_w.svg" alt=""><span>網站</span></a>
                     </div>
                     <div class="project-content">
-                        <a href="https://github.com/trista0925/project_CONCIERGE" target="_blank" class="btn-project"><img src="images/github_w.svg" alt=""><span>原始碼</span></a>
+                        <a href="https://github.com/trista0925/project_CONCIERGE" target="_blank" class="btn-project"><img src="images/icon/github_w.svg" alt=""><span>原始碼</span>
+                        </a>
                     </div>
-                    <p>專案簡介</p>
-                    <span>1111111111</span>
-                    <p>製作項目</p>
-                    <span>UI設計、RWD切版、網頁動態效果</span>
-                    <p>相關技術</p>
-                    <span>HTML / CSS / Bootstrap Grid / JavaScript / jQuery</span>
+                    <h4>專案簡介</h4>
+                    <p>電商網購日益發達，商品宅配時常因為住在公寓導致包裹無法收取，行動管理員媒合商家提供寄放包裹的空間，讓消費者更加便利的收取包裹，讓整個城市都是你的管理員。</p>
+                    <h4>製作項目</h4>
+                    <p>UI介面設計、RWD切版、網頁動態效果、會員系統(團隊協作)、訂單系統(團隊協作)</p>
+                    <h4>相關技術</h4>
+                    <p>HTML / CSS / Bootstrap / JavaScript / jQuery / PHP / MySQL</p>
                 </div>
                 <div class="project-box wow animate__animated animate__fadeInUp animate__slower">
-                    <div class="project-img img3"></div>
-                    <h3>平面設計作品 Graphic Design</h3>
+                    <a href="https://www.behance.net/tristadesign" target="_blank">
+                        <div class="project-img img3"></div>
+                    </a>
+                    <h3>視覺設計&社群行銷作品</h3>
                     <div class="project-content">
                         <a href="" data-modal="#modal3" class="modal-trigger btn-project">
-                            <img src="images/detail_w.svg" alt=""><span>預覽</span></a>
+                            <img src="images/icon/detail_w.svg" alt=""><span>預覽</span>
+                        </a>
                     </div>
                     <div class="project-content">
-                        <a href="https://github.com/trista0925/project_MOOD" target="_blank" class="btn-project"><img src="images/be_w.svg" alt=""><span>Behance</span></a>
+                        <a href="https://www.behance.net/tristadesign" target="_blank" class="btn-project"><img src="images/icon/be_w.svg" alt=""><span>Behance</span></a>
                     </div>
-                    <p>專案簡介</p>
-                    <span>1111111111</span>
-                    <p>製作項目</p>
-                    <span>1111111111</span>
+                    <h4>製作項目</h4>
+                    <p>網頁視覺設計、FB視覺設計及文案撰寫、LINE圖文設計。</p>
+                    <h4>相關技術</h4>
+                    <p>Photoshop / Illustrator</p>
                 </div>
+                <!-- modal最後一個無法點擊背景關閉 增加一個空modal解決 -->
+                <div data-modal="#modalbug"></div>
             </div>
         </div>
     </section>
@@ -174,28 +178,32 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <h3>木的生活 MOOD<span>WEBSITE</span></h3>
+                <p>網站架構規劃</p>
+                <div class="row">
+                    <img src="images/project_MOOD/MOOD_Xmind.png" alt="">
+                </div>
                 <p>首頁&商品列表</p>
                 <div class="row modal-p">
-                    <img src="images/project1-1.jpg" alt="">
-                    <img src="images/project1-2.jpg" alt="">
+                    <img src="images/project_MOOD/project1-1.jpg" alt="">
+                    <img src="images/project_MOOD/project1-2.jpg" alt="">
                 </div>
                 <p>商品詳情&購物車</p>
                 <div class="row modal-p">
-                    <img src="images/project1-3.jpg" alt="">
-                    <img src="images/project1-4.jpg" alt="">
+                    <img src="images/project_MOOD/project1-3.jpg" alt="">
+                    <img src="images/project_MOOD/project1-4.jpg" alt="">
                 </div>
                 <p>商品結帳&會員登入</p>
                 <div class="row modal-p">
-                    <img src="images/project1-5.jpg" alt="">
-                    <img src="images/project1-6.jpg" alt="">
+                    <img src="images/project_MOOD/project1-5.jpg" alt="">
+                    <img src="images/project_MOOD/project1-6.jpg" alt="">
                 </div>
                 <p>手機介面</p>
                 <div class="row modal-m">
-                    <img src="images/project1-1_m.jpg" alt="">
-                    <img src="images/project1-2_m.jpg" alt="">
-                    <img src="images/project1-3_m.jpg" alt="">
-                    <img src="images/project1-4_m.jpg" alt="">
-                    <img src="images/project1-5_m.jpg" alt="">
+                    <img src="images/project_MOOD/project1-1_m.jpg" alt="">
+                    <img src="images/project_MOOD/project1-2_m.jpg" alt="">
+                    <img src="images/project_MOOD/project1-3_m.jpg" alt="">
+                    <img src="images/project_MOOD/project1-4_m.jpg" alt="">
+                    <img src="images/project_MOOD/project1-5_m.jpg" alt="">
                 </div>
                 <!-- modal close button -->
                 <a href="" class="modal-close">
@@ -204,38 +212,41 @@
             </div>
         </div>
     </div>
-
     <div id="modal2" class="modal modal-bg" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <h3>行動管理員 CONCIERGE<span>WEBSITE</span></h3>
+                <p>網站架構規劃</p>
+                <div class="row">
+                    <img src="images/project_Concierge/Concierge_Xmind.png" alt="">
+                </div>
                 <p>首頁&會員登入&合作商家列表</p>
                 <div class="row modal-p">
-                    <img src="images/project2-1.jpg" alt="">
-                    <img src="images/project2-2.jpg" alt="">
+                    <img src="images/project_Concierge/project2-1.jpg" alt="">
+                    <img src="images/project_Concierge/project2-2.jpg" alt="">
                 </div>
                 <p>會員系統 - 系統自動判斷會員與管理者身份，顯示後台管理系統按鈕</p>
                 <div class="row modal-p">
-                    <img src="images/project2-3.jpg" alt="">
-                    <img src="images/project2-4.jpg" alt="">
+                    <img src="images/project_Concierge/project2-3.jpg" alt="">
+                    <img src="images/project_Concierge/project2-4.jpg" alt="">
                 </div>
-                <p>訂單填寫 - 填寫的資料將透過SQL匯入後台管理系統</p>
+                <p>訂單填寫 - 填寫的資料將存入MySQL資料庫並顯示於後台管理系統</p>
                 <div class="row modal-p">
-                    <img src="images/project2-5.jpg" alt="">
-                    <img src="images/project2-6.jpg" alt="">
+                    <img src="images/project_Concierge/project2-5.jpg" alt="">
+                    <img src="images/project_Concierge/project2-6.jpg" alt="">
                 </div>
                 <p>後台管理系統 - 訂單管理可查看訂單資訊，店家管理可新增、查看、修改店家資訊</p>
                 <div class="row modal-p">
-                    <img src="images/project2-7.jpg" alt="">
-                    <img src="images/project2-8.jpg" alt="">
+                    <img src="images/project_Concierge/project2-7.jpg" alt="">
+                    <img src="images/project_Concierge/project2-8.jpg" alt="">
                 </div>
                 <p>後台管理 - 訂單管理可查看訂單資訊，店家管理可新增、查看、修改店家資訊</p>
                 <div class="row modal-m">
-                    <img src="images/project2-1_m.jpg" alt="">
-                    <img src="images/project2-2_m.jpg" alt="">
-                    <img src="images/project2-3_m.jpg" alt="">
-                    <img src="images/project2-4_m.jpg" alt="">
-                    <img src="images/project2-5_m.jpg" alt="">
+                    <img src="images/project_Concierge/project2-1_m.jpg" alt="">
+                    <img src="images/project_Concierge/project2-2_m.jpg" alt="">
+                    <img src="images/project_Concierge/project2-3_m.jpg" alt="">
+                    <img src="images/project_Concierge/project2-4_m.jpg" alt="">
+                    <img src="images/project_Concierge/project2-5_m.jpg" alt="">
                 </div>
             </div>
         </div>
@@ -243,15 +254,42 @@
     <div id="modal3" class="modal modal-bg" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <h1>Modal</h1>
-                <p>Church-key American Apparel trust fund, cardigan mlkshk small batch Godard mustache pickled bespoke meh seitan. Wes Anderson farm-to-table vegan, kitsch Carles 8-bit gastropub paleo YOLO jean shorts health goth lo-fi. Normcore chambray
-                    locavore Banksy, YOLO meditation master cleanse readymade Bushwick.</p>
-                <p>Selfies normcore four dollar toast four loko listicle artisan. Hoodie Marfa authentic, wayfarers church-key tofu Banksy pop-up Kickstarter Brooklyn heirloom swag synth. Echo Park cray synth mixtape. Tofu gastropub squid readymade, trust
-                    fund Wes Anderson DIY PBR 8-bit try-hard +1 Shoreditch lo-fi tote bag.</p>
-                <p><img src="http://unsplash.it/600/300" alt="" /></p>
-                <p>Selfies normcore four dollar toast four loko listicle artisan. Hoodie Marfa authentic, wayfarers church-key tofu Banksy pop-up Kickstarter Brooklyn heirloom swag synth. Echo Park cray synth mixtape. Tofu gastropub squid readymade, trust
-                    fund Wes Anderson DIY PBR 8-bit try-hard +1 Shoreditch lo-fi tote bag.</p>
-                <p><img src="http://unsplash.it/600/300" alt="" /></p>
+                <h3>視覺設計&社群行銷<span>Visual Design & Social Marketing
+                </span></h3>
+                <p>視覺設計 Visual Design</p>
+                <div class="row">
+                    <div class="col-half">
+                        <img src="images/VisualDesign/web1-2.png" alt="">
+                        <img src="images/VisualDesign/web5-2.png" alt="">
+                        <img src="images/VisualDesign/web2-2.png" alt="">
+                    </div>
+                    <div class="col-half">
+                        <img src="images/VisualDesign/web4-2.png" alt="">
+                        <img src="images/VisualDesign/web6-2.png" alt="">
+                        <img src="images/VisualDesign/web3-2.png" alt="">
+                    </div>
+                </div>
+                <p>社群行銷 Social Marketing</p>
+                <div class="row">
+                    <div class="col-half">
+                        <img src="images/VisualDesign/socialmarketing-1.png" alt="">
+                        <img src="images/VisualDesign/socialmarketing-3.png" alt="">
+                    </div>
+                    <div class="col-half">
+                        <img src="images/VisualDesign/socialmarketing-2.png" alt="">
+                        <img src="images/VisualDesign/socialmarketing-4.png" alt="">
+                    </div>
+                </div>
+                <!-- modal close button -->
+                <a href="" class="modal-close">
+                    <svg class="" viewBox="0 0 24 24"><path d="M19 6.41l-1.41-1.41-5.59 5.59-5.59-5.59-1.41 1.41 5.59 5.59-5.59 5.59 1.41 1.41 5.59-5.59 5.59 5.59 1.41-1.41-5.59-5.59z"/><path d="M0 0h24v24h-24z" fill="none"/></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="modalbug" class="modal modal-bg" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
                 <!-- modal close button -->
                 <a href="" class="modal-close">
                     <svg class="" viewBox="0 0 24 24"><path d="M19 6.41l-1.41-1.41-5.59 5.59-5.59-5.59-1.41 1.41 5.59 5.59-5.59 5.59 1.41 1.41 5.59-5.59 5.59 5.59 1.41-1.41-5.59-5.59z"/><path d="M0 0h24v24h-24z" fill="none"/></svg>
@@ -263,8 +301,107 @@
     <section class="skills" id="skills">
         <div class="container">
             <div class="row">
-                <h2>專業技能<br>SKILLS</h2>
+                <h2 class="wow animate__animated animate__fadeInUp">SKILLS</h2>
+                <div class="skills-box wow animate__animated animate__fadeInUp">
+                    <div class="skills-img"><img src="images/icon/coding.svg" alt=""></div>
+                    <h3>網頁技術</h3>
+                    <p>- 熟悉 RWD 響應式網頁設計</p>
+                    <p>- 熟悉 HTML/CSS/Bootstrap</p>
+                    <p>- 了解基礎 JavaScript/jQuery</p>
+                    <p>- 了解版本控制 Git</p>
+                    <p>- 接觸過 PHP/MySQL</p>
+                </div>
+                <div class="skills-box wow animate__animated animate__fadeInUp">
+                    <div class="skills-img"><img src="images/icon/vector.svg" alt=""></div>
+                    <h3>多媒體設計</h3>
+                    <p>- 熟悉 PS/AI/InDesign</p>
+                    <p>- 熟悉 Adobe XD UI 介⾯設計</p>
+                    <p>- 具備視覺設計、廣告設計概念</p>
+                    <p>- 具備設計印刷概念</p>
+                    <p>- 了解 Premiere 基礎操作</p>
+                </div>
+                <div class="skills-box wow animate__animated animate__fadeInUp">
+                    <div class="skills-img"><img src="images/icon/seo.svg" alt=""></div>
+                    <h3>⾏銷企劃</h3>
+                    <p>- 社群媒體視覺設計&文案撰寫</p>
+                    <p>- ⾏銷專案規劃及執⾏p</p>
+                    <p>- Google Ads關鍵字操作</p>
+                    <p>- GA數據追蹤</p>
+                </div>
             </div>
+        </div>
+    </section>
+    <!-- experience =====================================  -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <div class="row">
+                <h2 class="wow animate__animated animate__fadeInUp">EXPERIENCE</h2>
+                <ul class="timeline">
+                    <!-- Item 1 -->
+                    <li>
+                        <div class="direction-r">
+                            <div class="flag-wrapper wow animate__animated animate__fadeInUp animate__slow">
+                                <span class="hexa"></span>
+                                <span class="flag">重新轉換跑道，補齊網頁全端拼圖</span>
+                                <span class="time-wrapper"><span class="time">Dec 2020 - Now</span>
+                            </div>
+                            <p class="desc wow animate__animated animate__fadeInUp animate__slow">2020年新冠疫情重挫旅遊業，公司進行人力縮編，雖然遺憾，但也藉由這次契機重新檢視自己的能力。由於在職時公司網站是外包製作，編碼時常遇到限制，因此抱著對網頁全端極大的好奇參加了職訓課程，課程中除了加深基本網頁能力，也學習到以往職場上無法接觸到的JavaScript、PHP等前後端概念，課程結束後也持續透過網路課程及社群平台學習Git、AdobeXD等相關技能。我相信要走網頁前端這條長遠的路，除了需具備多樣性的技能，也要擁有不斷獲取新知的熱情，才能夠不被潮流所淹沒。</p>
+                        </div>
+                    </li>
+                    <!-- Item 2 -->
+                    <li>
+                        <div class="direction-l">
+                            <div class="flag-wrapper wow animate__animated animate__fadeInUp animate__slow">
+                                <span class="hexa"></span>
+                                <span class="flag">轉職企劃美編，網頁設計新挑戰</span>
+                                <span class="time-wrapper"><span class="time">Jul 2016</span>
+                            </div>
+                            <p class="desc wow animate__animated animate__fadeInUp animate__slower">畢業後對於企劃美編相當有興趣，而向公司申請轉調正職。當時適逢官網將傳統框架改版為RWD，需在短時間內將大量專案改版以符合新的前端框架，團隊夥伴一起加班趕工，雖然辛苦但很喜歡這種凝聚力，這次機會讓我在網頁語言上有了顯著的進步，獲得相當大的成就感。</p>
+                        </div>
+                    </li>
+
+                    <!-- Item 3 -->
+                    <li>
+                        <div class="direction-r">
+                            <div class="flag-wrapper wow animate__animated animate__fadeInUp animate__slow">
+                                <span class="hexa"></span>
+                                <span class="flag">工讀時期，培養細心、高效率的工作能力</span>
+                                <span class="time-wrapper"><span class="time">Jul 2014</span>
+                            </div>
+                            <p class="desc wow animate__animated animate__fadeInUp animate__slower">大三時進入旅遊業擔任美編工讀，負責需求量龐大的行程手冊製作，透過制定標準流程以及與團隊共同建立資料自動化產出系統，成功將工作效率提升至兩倍以上，期間與團隊不斷溝通細節，也讓我培養出細心、高效率的工作能力，為我的職涯發展奠定了穩固的基石。</p>
+                        </div>
+                    </li>
+                    <!-- Item 4 -->
+                    <li>
+                        <div class="direction-l wow animate__animated animate__fadeInUp animate__slow">
+                            <div class="flag-wrapper">
+                                <span class="hexa"></span>
+                                <span class="flag">輔仁⼤學 商業管理系</span>
+                                <span class="time-wrapper"><span class="time">Sep 2012 - Jun 2016</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+    </section>
+    <!-- contact =====================================  -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="row">
+                <h2 class="wow animate__animated animate__fadeInUp">CONTACT</h2>
+                <form action="https://getform.io/f/84ca284c-6c9c-4cc4-aa9f-7d0ad65830be" class="wow animate__animated animate__fadeInUp animate__slow" method="POST">
+                    <input class="name" type="text" name="name" placeholder="Name">
+                    <input class="email" type="email" name="email" placeholder="Email">
+                    <textarea class="message" type="text" name="message" rows="5" required placeholder="Leave a message"></textarea>
+                    <button class="send" type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- footer =====================================  -->
+    <section class="footer">
+        <div class="container">
+            <p>Trista Portfolio © 2021 by Trista</p>
         </div>
     </section>
     <script src="js/index.js"></script>
