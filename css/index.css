@@ -64,7 +64,7 @@ a {
 }
 
 img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
 
@@ -150,7 +150,7 @@ header::after {
 nav {
     position: relative;
     width: 100%;
-    z-index: 11;
+    z-index: 13;
 }
 
 
@@ -161,6 +161,7 @@ nav {
         position: fixed;
         height: 60px;
         background: #293242;
+        z-index: 13;
     }
 }
 
@@ -337,6 +338,7 @@ label #cancel {
         height: 5px;
         margin: 0 auto;
         animation-name: drop;
+        -webkit-animation-name: drop;
         -webkit-animation-duration: 1s;
         animation-duration: 1s;
         -webkit-animation-timing-function: linear;
@@ -533,7 +535,7 @@ label #cancel {
 }
 
 .portfolio .row {
-    min-height: 100vh;
+    height: 100vh;
     align-content: center;
     align-items: center;
     justify-content: center;
@@ -613,7 +615,7 @@ label #cancel {
         bottom: -4%;
         width: 350px;
         height: 350px;
-        background-color: rgb(166, 180, 179, 0.1);
+        background-color: rgba(166, 180, 179, 0.1);
         border-radius: 50px;
     }
 }
@@ -635,7 +637,7 @@ label #cancel {
         bottom: -5%;
         width: 300px;
         height: 300px;
-        background-color: rgb(166, 180, 179, 0.1);
+        background-color: rgba(166, 180, 179, 0.1);
         border-radius: 50px;
     }
 }
@@ -860,9 +862,24 @@ label #cancel {
 
 /* modal內容 */
 
-.modal-dialog {
-    width: 80%;
-    padding: 1rem;
+
+/* 桌機 & 平板 */
+
+@media (min-width: 577px) {
+    .modal-dialog {
+        width: 80%;
+        padding: 1rem;
+    }
+}
+
+
+/* 手機 */
+
+@media (max-width: 576px) {
+    .modal-dialog {
+        width: 90%;
+        padding: 1rem;
+    }
 }
 
 .modal-content {
@@ -948,13 +965,21 @@ label #cancel {
     background: rgba(0, 0, 0, 0.6);
 }
 
+.modal-xmind img {
+    max-width: 70%;
+    height: 100%;
+    padding: 10px 0;
+}
+
 .modal-p img {
     max-width: 49%;
+    height: 100%;
     padding: 10px 0;
 }
 
 .modal-m img {
     max-width: 19%;
+    height: 100%;
     padding: 10px 0;
 }
 
@@ -963,23 +988,41 @@ label #cancel {
 
 .skills {
     width: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgb(0, 0, 0, 0.3)), url(../images/bg.png);
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url(../images/bg.png) center center;
     background-size: cover;
     background-attachment: fixed;
     position: relative;
 }
 
 
+/* 手機 */
+
+@media (max-width: 576px) {
+    .skills {
+        background-attachment: scroll;
+    }
+}
+
+
+/* 桌機 */
+
+@media (min-width: 1025px) {
+    .skills .row {
+        height: 100vh;
+    }
+}
+
+
 /* 平板 & 手機 */
 
 @media (max-width: 768px) {
-    .skills {
+    .skills .row {
+        min-height: 100vh;
         padding: 80px 0;
     }
 }
 
 .skills .row {
-    min-height: 100vh;
     align-content: center;
     align-items: center;
     justify-content: center;
@@ -1002,7 +1045,7 @@ label #cancel {
     text-align: center;
     padding: 20px;
     margin: 20px;
-    background: rgb(41, 50, 66, 0.7);
+    background-color: rgba(41, 50, 66, 0.7);
     border-radius: 20px;
 }
 
@@ -1034,7 +1077,7 @@ label #cancel {
 }
 
 .skills p {
-    padding: 0 30px;
+    padding: 0 15px;
     color: #a6b4b3;
 }
 
@@ -1052,7 +1095,6 @@ label #cancel {
     min-height: 100vh;
     align-content: center;
     align-items: center;
-    justify-content: center;
 }
 
 .experience .container h2 {
@@ -1305,14 +1347,23 @@ label #cancel {
 
 .contact {
     width: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgb(0, 0, 0, 0.3)), url(../images/bg.png);
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url(../images/bg.png) center center;
     background-size: cover;
     background-attachment: fixed;
     position: relative;
 }
 
+
+/* 手機 */
+
+@media (max-width: 576px) {
+    .contact {
+        background-attachment: scroll;
+    }
+}
+
 .contact .row {
-    min-height: 100vh;
+    height: 100vh;
     align-content: center;
     align-items: center;
     justify-content: center;

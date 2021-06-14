@@ -43,15 +43,6 @@ window.addEventListener('scroll', () => {
 
 })
 
-// 旋轉文字
-const text = document.querySelector('.circle-text');
-text.innerHTML = text.textContent.replace(/\S/g, "<span>$&</span>");
-
-const element = document.querySelectorAll('.circle-text span');
-for (let i = 0; i < element.length; i++) {
-    element[i].style.transform = "rotate(" + i * 16.5 + "deg)"
-}
-
 // 頁面滾動效果(指定頁面)
 const links = document.querySelectorAll(".smooth a");
 
