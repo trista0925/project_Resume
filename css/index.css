@@ -538,10 +538,28 @@ label #cancel {
 }
 
 .portfolio .row {
-    height: 100vh;
     align-content: center;
     align-items: center;
     justify-content: center;
+}
+
+
+/* 桌機 */
+
+@media (min-width: 1025px) {
+    .portfolio .row {
+        height: 100vh;
+    }
+}
+
+
+/* 平板 & 手機 */
+
+@media (max-width: 768px) {
+    .portfolio .row {
+        min-height: 100vh;
+        padding: 80px 0;
+    }
 }
 
 .portfolio .circle-text {
@@ -594,6 +612,7 @@ label #cancel {
 
 .portfolio .content {
     color: #a6b4b3;
+    width: 500px;
     margin: 40px;
 }
 
