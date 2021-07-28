@@ -8,6 +8,10 @@
     font-family: 'Encode Sans Semi Condensed', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     letter-spacing: 0.1rem;
     overflow-x: hidden;

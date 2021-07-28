@@ -44,22 +44,22 @@ window.addEventListener('scroll', () => {
 
 })
 
-// 頁面滾動效果(指定頁面)
-const links = document.querySelectorAll(".smooth a");
+// // 頁面滾動效果(指定頁面)
+// const links = document.querySelectorAll(".smooth a");
 
-for (const link of links) {
-    link.addEventListener("click", clickHandler);
-}
+// for (const link of links) {
+//     link.addEventListener("click", clickHandler);
+// }
 
-function clickHandler(e) {
-    e.preventDefault();
-    const href = this.getAttribute("href");
-    const offsetTop = document.querySelector(href).offsetTop;
-    scroll({
-        top: offsetTop,
-        behavior: "smooth"
-    });
-}
+// function clickHandler(e) {
+//     e.preventDefault();
+//     const href = this.getAttribute("href");
+//     const offsetTop = document.querySelector(href).offsetTop;
+//     scroll({
+//         top: offsetTop,
+//         behavior: "smooth"
+//     });
+// }
 
 // modal
 var Modal = (function() {
