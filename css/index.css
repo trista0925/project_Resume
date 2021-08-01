@@ -8,10 +8,6 @@
     font-family: 'Encode Sans Semi Condensed', sans-serif;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     letter-spacing: 0.1rem;
     overflow-x: hidden;
@@ -106,10 +102,10 @@ p {
 }
 
 .content .btn-resume {
-    display: block;
-    line-height: 35px;
+    display: inline-block;
+    line-height: 33px;
     height: 35px;
-    width: 130px;
+    width: 45px;
     margin: 15px 0;
     text-decoration: none;
     background: #293242;
@@ -175,6 +171,11 @@ nav {
     left: 40px;
     top: 30px;
     width: 50px;
+    transition: all 0.5s;
+}
+
+.logo:hover {
+    opacity: 0.6;
 }
 
 
@@ -276,6 +277,10 @@ label #bar {
     right: 40px;
     top: 40px;
     transition: all 0.5s;
+}
+
+label #bar:hover {
+    opacity: 0.6;
 }
 
 
@@ -542,28 +547,10 @@ label #cancel {
 }
 
 .portfolio .row {
+    height: 100vh;
     align-content: center;
     align-items: center;
     justify-content: center;
-}
-
-
-/* 桌機 */
-
-@media (min-width: 1025px) {
-    .portfolio .row {
-        height: 100vh;
-    }
-}
-
-
-/* 平板 & 手機 */
-
-@media (max-width: 768px) {
-    .portfolio .row {
-        min-height: 100vh;
-        padding: 80px 0;
-    }
 }
 
 .portfolio .circle-text {
@@ -616,7 +603,6 @@ label #cancel {
 
 .portfolio .content {
     color: #a6b4b3;
-    width: 500px;
     margin: 40px;
 }
 
@@ -630,8 +616,8 @@ label #cancel {
     .portfolio .slider {
         margin: 40px;
         position: relative;
-        width: 350px;
-        height: 350px;
+        width: 300px;
+        height: 300px;
     }
     .portfolio .slider::before {
         content: '';
@@ -639,8 +625,8 @@ label #cancel {
         position: relative;
         left: 4%;
         bottom: -4%;
-        width: 350px;
-        height: 350px;
+        width: 300px;
+        height: 300px;
         background-color: rgba(166, 180, 179, 0.1);
         border-radius: 50px;
     }
@@ -791,6 +777,11 @@ label #cancel {
     width: 320px;
     height: 220px;
     margin: auto;
+    transition: 0.5s;
+}
+
+.project-box .project-img:hover {
+    opacity: 0.6;
 }
 
 .project-box .img1 {

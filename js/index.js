@@ -40,26 +40,27 @@ window.addEventListener('scroll', () => {
 
     // // 圖片滑動效果
     // image_container.style.transform = `translateY(${scroll / (section_height + sectionY.top) * 50 - 50}px)`;
-
-
 })
 
-// // 頁面滾動效果(指定頁面)
-// const links = document.querySelectorAll(".smooth a");
+// 頁面滾動效果(指定頁面)
+var applyScrolling = function(arr, cb) {
+    for (var i = 0; i < arr.length; i++) {
+        cb.call(null, i, arr[i])
+    }
+}
 
-// for (const link of links) {
-//     link.addEventListener("click", clickHandler);
-// }
+var anchors = document.querySelectorAll("a[href^='#']")
+if (window.scrollTo) {
+    applyScrolling(anchors, function(index, el) {
+        var target = document.getElementById(el.getAttribute('href').substring(1))
 
-// function clickHandler(e) {
-//     e.preventDefault();
-//     const href = this.getAttribute("href");
-//     const offsetTop = document.querySelector(href).offsetTop;
-//     scroll({
-//         top: offsetTop,
-//         behavior: "smooth"
-//     });
-// }
+        el.addEventListener('click', function(e) {
+            console.log(target)
+            e.preventDefault()
+            window.scrollTo({ 'behavior': 'smooth', 'top': target.offsetTop })
+        })
+    })
+}
 
 // modal
 var Modal = (function() {
