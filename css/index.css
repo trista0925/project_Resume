@@ -1001,6 +1001,21 @@ label #cancel {
     padding: 10px 0;
 }
 
+.modal-p .color {
+    width: 70px;
+    height: 70px;
+    background: #E8E0D4;
+    padding: 5px;
+    margin: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-p .color span {
+    font-size: 0.5rem;
+}
+
 
 /* skills ===================================== */
 
